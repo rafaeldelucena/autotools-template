@@ -1,0 +1,4 @@
+autotools-template
+==================
+
+Autotools Template
