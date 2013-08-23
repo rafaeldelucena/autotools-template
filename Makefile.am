@@ -9,5 +9,5 @@ autotools_template_SOURCES = src/main.c
 
 lib_LTLIBRARIES = libautotools-template-1.0.la
 libautotools_template_1_0_ladir = $(includedir)/autotools-template-1.0
-libautotools_template_1_0_la_SOURCES = libautotools-template.c
+libautotools_template_1_0_la_SOURCES = src/libautotools-template.c
 libautotools_template_1_0_la_HEADERS = libautotools-template.h
