@@ -1,8 +1,33 @@
-## Place generated object files (.o) into the same directory as their source
-## files, in order to avoid collisions when non-recursive make is used.
-AUTOMAKE_OPTIONS = subdir-objects
+ACLOCAL_AMFLAGS = -I m4
 
-ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS}
+SUBDIRS = src
 
-bin_PROGRAMS = autotools-example
-autotools_example_SOURCES = src/main.cc
+if ENABLE_TESTS
+SUBDIRS += tests
+endif
+
+DIST_SUBDIRS = $(SUBDIRS)
+
+autotools_templatedocdir = ${prefix}/doc/autotools-template
+autotools_templatedoc_DATA = \
+	README\
+	COPYING\
+	AUTHORS\
+	ChangeLog\
+	INSTALL\
+	NEWS
+
+
+EXTRA_DIST = $(autotools_templatedoc_DATA)
+
+
+# Remove doc directory on uninstall
+uninstall-local:
+	-rm -r $(autotools_templatedocdir)
+
+coverage:
+if ENABLE_COVERAGE
+	gcovr -x -r .. -e ".+\.test\.cpp" --object-directory=src > coverage.xml
+else
+	@echo "To generate coverage report, please run ./configure or sh autogen.sh with --enable-coverage"
+endif
