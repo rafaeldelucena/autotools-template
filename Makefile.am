@@ -29,5 +29,5 @@ coverage:
 if ENABLE_COVERAGE
 	gcovr -x -r .. -e ".+\.test\.cpp" --object-directory=src > coverage.xml
 else
-	@echo "To generate coverage report, please run ./configure or sh autogen.sh with --enable-coverage"
+	@echo "To generate coverage report, please run ./configure with --enable-coverage"
 endif
