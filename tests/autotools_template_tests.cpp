@@ -7,7 +7,7 @@ TEST_GROUP(FirstTestGroup)
 
 TEST(FirstTestGroup, FirstTest)
 {
-       FAIL("Fail me!");
+    FAIL("Fail me!");
 }
 
 int main (int argc, char ** argv)

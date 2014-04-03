@@ -8,8 +8,8 @@ AM_CPPFLAGS = \
 	$(PRODUCTION_CODE_INCLUDES)
 
 AM_CFLAGS =	-Werror\
-			-Wall\
-			-g
+	-Wall\
+	-g
 
 AM_CXXFLAGS = $(AM_CFLAGS)
 
@@ -17,7 +17,7 @@ TEST_PROGS = autotools_template_tests
 
 autotools_template_tests_SOURCES = autotools_template_tests.cpp
 autotools_template_tests_LDADD = $(CPPUTEST_LIBS)\
-						$(PRODUCTION_CODE_LIBS)
+	$(PRODUCTION_CODE_LIBS)
 
 check_PROGRAMS = $(TEST_PROGS)
 

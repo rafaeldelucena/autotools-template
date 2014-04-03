@@ -5,10 +5,10 @@ AM_CPPFLAGS = \
 	$(DEPENDENCIES_CFLAGS)
 
 AM_CFLAGS =\
-		   -Wextra
-		   -Werror\
-		   -Wall\
-		   -g
+	-Wextra
+	-Werror\
+	-Wall\
+	-g
 
 libautotools_template_la_includedir = $(includedir)/autotools_template
 
@@ -32,8 +32,8 @@ EXTRA_DIST = \
 
 if ENABLE_TESTS
 AM_CFLAGS +=\
-			-fprofile-arcs\
-			-ftest-coverage
+	-fprofile-arcs\
+	-ftest-coverage
 
 libautotools_template_la_LIBADD += -lgcov
 endif
