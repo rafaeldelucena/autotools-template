@@ -6,7 +6,7 @@ endif
 
 DIST_SUBDIRS = $(SUBDIRS)
 
-autotools_templatedocdir = ${prefix}/doc/autotools-template
+autotools_templatedocdir = ${prefix}/doc/autotools_template
 autotools_templatedoc_DATA = \
 	README\
 	COPYING\
