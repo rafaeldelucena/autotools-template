@@ -1,7 +1,7 @@
 noinst_PROGRAMS = $(TEST_PROGS)
 
 PRODUCTION_CODE_INCLUDES = -I$(top_builddir)/src
-PRODUCTION_CODE_LIBS = $(top_builddir)/src/libautotools-template.la
+PRODUCTION_CODE_LIBS = $(top_builddir)/src/libautotools_template.la
 
 AM_CPPFLAGS = \
 	$(CPPUTEST_CFLAGS)\
@@ -13,9 +13,9 @@ AM_CFLAGS =	-Werror\
 
 AM_CXXFLAGS = $(AM_CFLAGS)
 
-TEST_PROGS = autotools-template-tests
+TEST_PROGS = autotools_template_tests
 
-autotools_template_tests_SOURCES = autotools-template-tests.cpp
+autotools_template_tests_SOURCES = autotools_template_tests.cpp
 autotools_template_tests_LDADD = $(CPPUTEST_LIBS)\
 						$(PRODUCTION_CODE_LIBS)
 

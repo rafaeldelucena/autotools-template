@@ -1,4 +1,4 @@
-AC_INIT([autotools-template], [0.1], [rafael@casaamarelahacking.com.br])
+AC_INIT([autotools_template], [0.1], [rafael@casaamarelahacking.com.br])
 
 AC_CONFIG_HEADERS([config.h])
 
@@ -34,7 +34,7 @@ AS_IF([test "x$enable_coverage" = "xyes"], [
 ])
 
 AC_CONFIG_FILES([Makefile
-src/autotools-template.pc
+src/autotools_template.pc
 src/Makefile
 ])
 

@@ -1,4 +1,4 @@
-autotools-template
+autotools_template
 ==================
 
 Autotools Template
