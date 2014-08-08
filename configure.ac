@@ -17,7 +17,7 @@ AC_ARG_ENABLE(tests, AS_HELP_STRING([--enable-tests],
 
 AS_IF([test "x$enable_tests" = "xyes"],[
     AM_CONDITIONAL([ENABLE_TESTS], [true]),
-    PKG_CHECK_MODULES(CPPUTEST, [cpputest])
+    PKG_CHECK_MODULES(CPPUTEST, [cpputest]),
     AC_CONFIG_FILES([tests/Makefile])
 ],[
     AM_CONDITIONAL([ENABLE_TESTS], [false])
