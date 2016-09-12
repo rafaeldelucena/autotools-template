@@ -19,9 +19,9 @@ AC_ARG_ENABLE(tests,
               [enable_tests=no])
 
 AS_IF([test "x$enable_tests" = "xyes"],
-      [AM_CONDITIONAL([ENABLE_TESTS], [true])],
-      [PKG_CHECK_MODULES(CPPUTEST, [cpputest])],
-      [AC_CONFIG_FILES([tests/Makefile])],
+      [AM_CONDITIONAL([ENABLE_TESTS], [true])
+      PKG_CHECK_MODULES(CPPUTEST, [cpputest])
+      AC_CONFIG_FILES([tests/Makefile])],
       [AM_CONDITIONAL([ENABLE_TESTS], [false])])
 
 AC_ARG_ENABLE(coverage, AS_HELP_STRING([--enable-coverage],
