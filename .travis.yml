@@ -1,4 +1,4 @@
 language: cpp
 
 script:
-    autoreconf -if && ./configure --enable-tests && make check
+    cd autotools_template && autoreconf -if && ./configure --enable-tests && make check
