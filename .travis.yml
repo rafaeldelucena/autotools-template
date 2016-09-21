@@ -3,7 +3,7 @@ language: cpp
 before_install:
     sudo apt-get -qq update
 
-    sudo apt-get install -y libcpputest-dev 
+    sudo apt-get install -y cpputest
 
 script:
     autoreconf -if && ./configure --enable-tests && make && make check
