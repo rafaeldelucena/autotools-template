@@ -1,0 +1,4 @@
+language: cpp
+
+script:
+    autoreconf -if && ./configure --enable-tests && make check
