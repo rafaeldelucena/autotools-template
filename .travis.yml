@@ -1,3 +1,5 @@
+sudo: required
+
 language: cpp
 
 before_install:
@@ -7,3 +9,8 @@ before_install:
 
 script:
     autoreconf -if && ./configure --enable-tests && make && make check
+
+addons:
+    apt:
+        sources:
+        - ubuntu-toolchain-r-test
