@@ -1,4 +1,8 @@
 language: cpp
 
+before_install:
+    sudo apt-get -qq update
+    sudo apt-get install -y libcpputest-dev 
+
 script:
-    cd autotools_template && autoreconf -if && ./configure --enable-tests && make check
+    autoreconf -if && ./configure --enable-tests && make && make check
