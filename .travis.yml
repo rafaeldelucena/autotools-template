@@ -12,6 +12,7 @@ before_install:
     - cd -
 
 script:
+    - cd autotools_template
     - autoreconf -if
     - ./configure --enable-tests
     - make
