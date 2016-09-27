@@ -3,7 +3,7 @@ AC_INIT([autotools_template],
         [rafael@casaamarelahacking.com.br])
 
 AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_MACRO_DIRS([m4])
+AC_CONFIG_MACRO_DIR([m4])
 
 AM_INIT_AUTOMAKE([1.11])
 
